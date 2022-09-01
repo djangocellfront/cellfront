@@ -23,7 +23,7 @@
           <div class="card-body">
             <h5 class="card-title">탄소덩어리</h5>
             <p class="card-text">체력 30<br>획득자원 10</p>
-            <a href="" class="btn btn-primary">사냥하기</a>
+            <a href="" class="btn btn-primary" id="hunt-button">사냥하기</a>
           </div>
         </div>
       </div>
@@ -33,7 +33,7 @@
           <div class="card-body">
             <h5 class="card-title">세포조각</h5>
             <p class="card-text">체력 000<br>획득자원 000</p>
-            <a href="" class="btn btn-primary">사냥하기</a>
+            <a href="" class="btn btn-primary" id="hunt-button">사냥하기</a>
           </div>
         </div>
       </div>
@@ -43,11 +43,14 @@
           <div class="card-body">
             <h5 class="card-title">식물세포</h5>
             <p class="card-text">체력 000<br>획득자원 000</p>
-            <a href="" class="btn btn-primary">사냥하기</a>
+            <a href="" class="btn btn-primary" id="hunt-button">사냥하기</a>
           </div>
         </div>
       </div>
     </div>
+  </div>
+  <div class="d-grid gap-2 col-6 mx-auto pt-3">
+    <a class="btn btn-primary" type="button" href="" id="upgrade-button">강화하기</a>
   </div>
 </div>
 
@@ -60,8 +63,12 @@
     font-size: 12px;
   }
 
-  a.btn {
+  #hunt-button {
     font-size: 10px;
+  }
+
+  #upgrade-button {
+    padding: 10%;
   }
 </style>
 {% endblock %}
