@@ -11,6 +11,5 @@ class Table(tables.Table):
         template_name = "django_tables2/table.html"
         attrs = {"class": "table table-bordered table-hover text-center",
                  "td": {"class": "align-middle"},
-                 "th": {"class": "align-middle"},
-                 "style": "table-layout: fixed; word-wrap: break-word;"}
+                 "th": {"class": "align-middle"}}
         per_page = 20
