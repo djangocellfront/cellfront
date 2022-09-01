@@ -4,8 +4,8 @@ import django_tables2 as tables
 
 class Table(tables.Table):
     name = tables.Column("이름", orderable=False)
-    experience = tables.Column("경험치", orderable=False)
     damage = tables.Column("데미지", orderable=False)
+    resource = tables.Column("자원", orderable=False)
 
     class Meta:
         template_name = "django_tables2/table.html"
