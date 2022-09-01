@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django_tables2 import RequestConfig
-from web.table import Table
-from web.query import get_query
+from web.table import StatusTable, UpgradeChartTable
+from web import query
 
 
 def handler404(request, *args, **argv):
@@ -20,8 +20,17 @@ def handler500(request, *args, **argv):
 
 def index(request):
     context = {}
-    queryset = [get_query()]
-    table = Table(queryset)
+    queryset = [query.status.get_query()]
+    table = StatusTable(queryset)
     RequestConfig(request).configure(table)
     context["table"] = table
     return render(request, "web/index.html", context)
+
+
+def upgrade_chart(request):
+    context = {}
+    queryset = query.upgrade_chart.get_queryset()
+    table = UpgradeChartTable(queryset)
+    RequestConfig(request).configure(table)
+    context["table"] = table
+    return render(request, "web/upgrade-chart.html", context)
